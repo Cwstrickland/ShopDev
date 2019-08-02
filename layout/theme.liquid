@@ -12,6 +12,7 @@
 </head>
 <body>
 
+  <div class="heading">
   {% for link in linklists.main-menu.links %}
     {% assign child_list_handle = link.title | handleize %}
     {% if linklists[child_list_handle].links != blank %}
@@ -24,8 +25,8 @@
     {% endif %}
   {% endfor %}
 
-  <a href="/cart">cart</a>
-
+    <a href="/cart">cart</a>
+  </div>
   {% if shop.customer_accounts_enabled %}
     {% if customer %}
       <a href="/account">account</a>
@@ -36,8 +37,15 @@
     {% endif %}
   {% endif %}
 
+
   <main role="main">
     {{ content_for_layout }}
   </main>
+
+{%comment%} browsersync connector {%endcomment%}
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<p>
 </body>
 </html>
