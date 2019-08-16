@@ -1,13 +1,27 @@
 // put your styles here
+body{
+    background:lightgray;
+}
+
 .heading {
-    box-align: center;
-    display: flexbox
+    box-align: left;
+    display: block;
+    min-height: 80px;
+    vertical-align: middle;
+    background-color: rgba(35, 182, 35, 0.664);
+    display: flexbox;
+    position: absolute;
    
 }
 a {
-    color:black;
+    color:red;
     font-weight: 900;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 0 5%; 
+    vertical-align: middle;
+    font-family: Helvetica, sans-serif; 
 
+}
+h1 {
+    align: center;
+    color: burlywood;
 }
